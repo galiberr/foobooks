@@ -4,3 +4,6 @@
 Homestead.yaml
 Homestead.json
 .env
+/nbproject/private/
+to_do
+/storage/debugbar
