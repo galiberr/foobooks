@@ -115,13 +115,13 @@ class BookController extends Controller {
         }
 
         public function getQueriesPracticeQ2(Request $request) {
-                $books = \App\Book::where('published', '>', '1940')->orderBy('id')->get();
+                $books = \App\Book::where('published', '>', '1950')->orderBy('id')->get();
                 if (!$books->isEmpty()) {
                         echo "These are all books in your table published after 1950:<br />";
                         echo "<ol>";
                         // Output the books
                         foreach ($books as $book) {
-                                echo "<li>" . $book->title . '</li>';
+                                echo "<li>" . $book->published . ' ' . $book->title . '</li>';
                         }
                         echo "</ol>";
                 } else {
